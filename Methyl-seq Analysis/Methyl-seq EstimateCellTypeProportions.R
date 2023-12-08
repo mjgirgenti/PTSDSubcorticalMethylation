@@ -29,7 +29,7 @@ library(Seurat)
 library(Rtsne)
 library(ggbeeswarm)
 library(umap)
-source("../Methyl Helper FUN - CellTypeProportion 1.R")
+source("../Helper FUN for Methyl-seq - CellTypeProportion 1.R")
 
 ## Load AD Nancy Data
 sc_obj <- readRDS("../seurat_obj_cell_type_labelled.rds")
@@ -143,7 +143,7 @@ library(GenomicRanges)
 ## Functions
 ##############################################################################
 
-source("../Methyl Helper FUN - CellTypeProportion 2.R")
+source("../Helper FUN for Methyl-seq - CellTypeProportion 2.R")
 
 load("../NeuProp_ref.RData")
 datMethylSig = NeuProp_ref$DNAm_ref
