@@ -1,4 +1,4 @@
-# Functional annotation of the human PTSD methylome identifies tissue-specific epigenetic variation across subcortical brain regions
+## Functional annotation of the human PTSD methylome identifies tissue-specific epigenetic variation across subcortical brain regions
 
 This is the repo for our PTSD subcortical methylation analysis. 
 
