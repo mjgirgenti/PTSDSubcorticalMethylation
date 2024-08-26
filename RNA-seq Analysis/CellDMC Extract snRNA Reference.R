@@ -9,7 +9,7 @@ library(forcats)
 
 # dir.create("public_data/Tran")
 # system("wget https://libd-snrnaseq-pilot.s3.us-east-2.amazonaws.com/SCE_NAc-n8_tran-etal.rda -P public_data/Tran")
-load("/gpfs/gibbs/pi/girgenti/jw2372/multiome/public_data/Tran/SCE_AMY-n5_tran-etal.rda", verbose = TRUE)
+load(".../SCE_AMY-n5_tran-etal.rda", verbose = TRUE)
 
 # Collapse factors
 sce.amy.tran$cellType <- fct_relabel(sce.amy.tran$cellType, ~ gsub("_.*", "",.x))
@@ -35,7 +35,7 @@ counts(subset_sce.amy.tran) %>%
   tibble::rownames_to_column(var = "gene") %>% 
   write.table(., file = "sc_AMG.txt", sep = "\t", quote = F, row.names = F, col.names = c("gene", as.character(subset_sce.amy.tran$cellType)))
 
-load("/gpfs/gibbs/pi/girgenti/methylation_shared_folder/RNAseq/snRNA_public/SCE_HPC-n3_tran-etal.rda", verbose = TRUE)
+load(".../SCE_HPC-n3_tran-etal.rda", verbose = TRUE)
 
 # Collapse factors
 sce.hpc.tran$cellType <- fct_relabel(sce.hpc.tran$cellType, ~ gsub("_.*", "",.x))
