@@ -109,16 +109,16 @@ enrichment_table$Chisq_pval_corrected <- p.adjust(enrichment_table$Chisq_pval, m
 
 # CpH ----
 CpH_result <- list()
-for (file in list.files("/gpfs/gibbs/pi/girgenti/yjliu/Methylation_Analysis/PTSD_Methylation/DSS_Filtered_NoSmooth_Ancestry_Prop_CpH/results/")) {
+for (file in list.files(".../results/")) {
   reg <- strsplit(file, "_")[[1]][7]
   dis <- strsplit(file, "_")[[1]][8]
   CH_type <- strsplit(file, "_")[[1]][10]
-  load(paste0("/gpfs/gibbs/pi/girgenti/yjliu/Methylation_Analysis/PTSD_Methylation/DSS_Filtered_NoSmooth_Ancestry_Prop_CpH/results/", file))
+  load(paste0(".../results/", file))
   CpH_result <- rbind(CpH_result, cbind(dml.results[,1:5], region = reg, Dx = dis, CHType = CH_type))
 }
 
-load("/gpfs/gibbs/pi/girgenti/yjliu/Methylation_Analysis/CpH_annotation/CHG_gene_annotation.RData")
-load("/gpfs/gibbs/pi/girgenti/yjliu/Methylation_Analysis/CpH_annotation/CHH_gene_annotation.RData")
+load(".../CHG_gene_annotation.RData")
+load(".../CHH_gene_annotation.RData")
 
 met_CpH_res <- CpH_result %>%
   mutate(seqnames = paste0("chr", chr)) %>%
