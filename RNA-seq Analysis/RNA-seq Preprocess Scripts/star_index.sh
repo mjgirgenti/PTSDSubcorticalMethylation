@@ -6,7 +6,7 @@
 #SBATCH --mail-type=ALL
 
 PATH_TO_FASTA=/home/tpn5/gibbs/HPC/RefGenome/Homo_sapiens.GRCh38.dna.primary_assembly.fa # Path to genome assembly
-PATH_TO_GTF=/home/tpn5/gibbs/HPC/RefGenome/Homo_sapiens.GRCh38.109.gtf
+PATH_TO_GTF=/home/tpn5/gibbs/HPC/RefGenome/Homo_sapiens.GRCh38.96.gtf
 
 OUT_FOLDER=/home/tpn5/gibbs/HPC/RefGenome/STARindices
 
